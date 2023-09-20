@@ -1,0 +1,39 @@
+Em um exercício anterior escrevemos uma função para calcular o IMC de uma
+pessoa. A função recebe a altura da pessoa em metros, a sua massa corporal em
+quilos e retorna seu Índice de Massa Corporal. O IMC é a massa dividida pelo
+quadrado da altura.
+
+Agora, crie duas versões para a função IMC: uma que trabalha apenas com valores
+do tipo float e outra que trabalha somente com valores do tipo double.
+
+#include <iostream>
+
+using namespace std;
+
+float imc1(float x, float y)
+{ 
+	float calculo = y / (x * x);
+
+		return calculo;
+}
+
+double imc2(double x, double y)
+{
+	double calculo = y / (x * x);
+
+	    return calculo;  
+}
+
+int main() 
+{ 
+	cout << imc1(1.75f, 80.0f) << endl;
+    cout << imc2(1.75, 80.0) << endl;
+
+	cout << fixed;
+	cout.setf(10);
+
+	cout << imc1(1.75f, 80.0f) << endl;
+	cout << imc2(1.75, 80.0) << endl;
+
+}
+
