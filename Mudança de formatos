@@ -1,0 +1,27 @@
+Escreva um programa que leia um número ponto flutuante e exiba-o na notação
+padrão do cout, em notação científica e em notação decimal (fixa). Use a função
+cout.setf() para mudar os formatos. 
+
+Digite um ponto flutuante: 258040.5
+Notação padrão: 258041
+Notação científica: 2.580405e+005
+Notação decimal: 258040.500000
+
+#include <iostream>
+
+using namespace std;
+
+
+int main() 
+{ 
+	double num = 258040.5;
+
+	cout << num << endl;
+
+	cout << scientific << num << endl;
+
+	cout.setf(6);
+
+	cout << fixed << num;
+
+}
