@@ -1,0 +1,38 @@
+Existem aproximadamente 3.156 x 107 segundos em um ano. Escreva um
+programa que pergunte sua idade em anos e passe essa informação para uma
+função que deve retornar o equivalente em segundos. Utilize uma constante
+simbólica para representar o número de segundos em um ano.
+
+Digite sua idade em anos: 25
+25 anos correspondem a 7.89e+008 segundos.
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+double anos_segundos(double x)
+{
+	const double segundos_ano = 3.156 * pow(10, 7);
+
+	double resultado = segundos_ano * x;
+
+	return resultado;
+}
+
+
+int main() 
+{ 
+	cout << "Digite Sua Idade: ";
+	int idade;
+	cin >> idade;
+
+	cout << idade << " anos correspondem " << anos_segundos(idade) << " segundos " << endl;
+
+	cout.setf(1);
+	cout.precision(9);
+
+	cout << idade << " anos correspondem " << anos_segundos(idade) << " segundos ";
+
+
+}
